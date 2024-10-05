@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="Images/Fav.png" type="image/png">
+    <link href="Css/home.css?v=5" rel="stylesheet">
+
+    <!--   Icon Import   -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--   Font Import   -->
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98777,98776,98772,98773,98775,98770,98771,98769" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sf-compact-display?styles=16093,16092" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sf-mono?styles=36554,36555,36550,36551,36552,36553,36556,36557,36546,36547,36548,36549" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+
+    <title>myTransit Pro</title>
+</head>
+<body>
+    <!--   Top   -->
+    <header class="active">
+        <div class="loader">
+            <img src="Icons/color_landRover.png" alt="Loader Image">
+            <span class="progress-bar" id="progress-bar"></span>
+        </div>
+    </header>
+
+    <!--   Middle   -->
+    <main>
+        <div class="popUp-box" style="display: none;">
+            <div class="popUp">
+
+            </div>
+        </div>
+
+        <div class="side-dash">
+            <i class="ri-close-fill" id="closeSideDash"></i>
+            <div id="toggleSideDash">
+                <i class="ri-arrow-right-s-fill active"></i>
+                <i class="ri-arrow-left-s-fill"></i>
+            </div>
+            
+            <h3>Recent Updates</h3>
+            <ul class="box" id="updates">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <!--   Page 1   -->
+        <section class="active" id="home">
+            <div class="header active">
+                <h1>Welcome</h1>
+                <h3>Name and Surname</h3>
+
+                <div class="input-box">
+                    <input type="search" name="searchAddress" id="searchAddress" placeholder="" required>
+                    <i class="ri-search-eye-line"></i>
+                    <span>Search Address . . .</span>
+                
+                    <!--<ul id="searchResults">
+                        <li>
+                            <p>Place</p>
+                            <i class="ri-arrow-right-s-line"></i>
+                        </li>
+                    </ul>-->
+                </div>
+            </div>
+
+            <swiper-container class="frequent-addresses"  slides-per-view="auto" space-between="15" free-mode="true">
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Home</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Work</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+                <swiper-slide><i class="ri-map-pin-2-fill"></i><p>Address</p></swiper-slide>
+            </swiper-container>
+
+            <div class="body">
+                <div class="page active" id="tripSummary">
+                    <div class="title">
+                        <h3>Upcoming:</h3>
+                        <div class="see-more" id="moreTrips">View All <i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+
+                    <ul class="content" id="myTrips">
+                        <li>
+                            <div class="img">
+                                <img src="Images/Lewis.webp" alt="Map Location Image">
+                            </div>
+    
+                            <div class="details">
+                                <h1 class="to"><b>To:</b> 30 Pintail Cresent, Zeekoevlei</h1>
+                                <h3 class="from"><b>Date:</b>Thu 1 Aug 2024</h3>
+                                <div class="flex-box">
+                                    <h5 class="driver">Driver: <br>Lewis Hamilton</h5>
+                                    <h5 class="vehicle">Vehicle: <br>CAA 123 456</h5>
+                                </div>
+    
+                                <p class="price"><b>Price:</b>R250</p>
+                            </div>
+    
+                            <i class="ri-arrow-right-s-line"></i>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="Images/Lewis.webp" alt="Map Location Image">
+                            </div>
+    
+                            <div class="details">
+                                <h1 class="to"><b>To:</b> 30 Pintail Cresent, Zeekoevlei</h1>
+                                <h3 class="from"><b>Date:</b>Thu 1 Aug 2024</h3>
+                                <div class="flex-box">
+                                    <h5 class="driver">Driver: <br>Lewis Hamilton</h5>
+                                    <h5 class="vehicle">Vehicle: <br>CAA 123 456</h5>
+                                </div>
+    
+                                <p class="price"><b>Price:</b>R250</p>
+                            </div>
+    
+                            <i class="ri-arrow-right-s-line"></i>
+                        </li>
+                    </ul>
+
+                    <div class="title">
+                        <h3>History:</h3>
+                        <div class="see-more" id="moreHistory">View All <i class="ri-arrow-right-s-line"></i></div>
+                    </div>
+
+                    <ul class="content" id="myHistory">
+                        <li>
+                            <div class="img">
+                                <img src="Images/Lewis.webp" alt="Map Location Image">
+                            </div>
+    
+                            <div class="details">
+                                <h1 class="to"><b>To:</b> 30 Pintail Cresent, Zeekoevlei</h1>
+                                <h3 class="from"><b>Date:</b>Thu 1 Aug 2024</h3>
+                                <div class="flex-box">
+                                    <h5 class="driver">Driver: <br>Lewis Hamilton</h5>
+                                    <h5 class="vehicle">Vehicle: <br>CAA 123 456</h5>
+                                </div>
+    
+                                <p class="price"><b>Price:</b>R250</p>
+                            </div>
+    
+                            <i class="ri-arrow-right-s-line"></i>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="Images/Lewis.webp" alt="Map Location Image">
+                            </div>
+    
+                            <div class="details">
+                                <h1 class="to"><b>To:</b> 30 Pintail Cresent, Zeekoevlei</h1>
+                                <h3 class="from"><b>Date:</b>Thu 1 Aug 2024</h3>
+                                <div class="flex-box">
+                                    <h5 class="driver">Driver: <br>Lewis Hamilton</h5>
+                                    <h5 class="vehicle">Vehicle: <br>CAA 123 456</h5>
+                                </div>
+    
+                                <p class="price"><b>Price:</b>R250</p>
+                            </div>
+    
+                            <i class="ri-arrow-right-s-line"></i>
+                        </li>
+                        <li>
+                            <div class="img">
+                                <img src="Images/Lewis.webp" alt="Map Location Image">
+                            </div>
+    
+                            <div class="details">
+                                <h1 class="to"><b>To:</b> 30 Pintail Cresent, Zeekoevlei</h1>
+                                <h3 class="from"><b>Date:</b>Thu 1 Aug 2024</h3>
+                                <div class="flex-box">
+                                    <h5 class="driver">Driver: <br>Lewis Hamilton</h5>
+                                    <h5 class="vehicle">Vehicle: <br>CAA 123 456</h5>
+                                </div>
+    
+                                <p class="price"><b>Price:</b>R250</p>
+                            </div>
+    
+                            <i class="ri-arrow-right-s-line"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="page" id="seeMore" style="display: none;">
+                    <div class="title">
+                        <h1>History:</h1>
+                    </div>
+
+                </div>
+
+                <div class="page" id="selectBooking"  style="display: none;">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Book -->
+        <section id="book" style="display: none;">
+            <div class="header">
+                <i class="ri-arrow-left-s-fill" id="prevWeek"></i>
+                <i class="ri-arrow-right-s-fill" id="nextWeek"></i>
+
+                <ul class="week">
+                    <li>Sun</li>
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                </ul>
+            </div>
+
+            <div class="body">
+                <div class="page active">
+                    <div class="select-box">
+                        <div class="address">
+                            <i class="ri-map-pin-2-fill"></i>
+                            <input type="text" id="pickUp" placeholder="Pick Up Address...">
+                        </div>
+
+                        <div class="address line">
+                            <i class="ri-pin-distance-fill"></i>
+                            <input type="text" class="dropOff" id="dropOff" placeholder="Drop Off Address...">
+                        </div>
+
+                        <button id="addStop"><i class="ri-add-line"></i></button>
+                    </div>
+
+                    <ul class="content" id="addressList">
+                        <li>
+                            <div class="icon">
+                                <i class="ri-map-pin-2-fill"></i>
+                            </div>
+                            <div class="box">
+                                <h5>${title}</h5>
+                                <p>${data}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="page" style="display: none;">
+                    <button id="bookNow">Book Now!</button>
+                </div>
+
+                <div class="page" style="display: none;">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Transit -->
+        <section id="map" style="display: none;">
+            <div class="header">
+                <div class="img">
+                    <img src="Images/googlemaps.png" alt="Vehicle Image">
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="img" id="vehicleImg">
+                    <img src="Images/land-rover.png" alt="Vehicle Image">
+                </div>
+
+                <h1 class="licence">CAA 123 456</h1>
+
+                <div class="driver">
+                    <div class="img" id="driverImg">
+                        <img src="Images/Lewis.webp" alt="Driver Image">
+                    </div>
+
+                    <div class="details">
+                        <h3 class="name">Name & Surname</h3>
+                        <h5 class="tel">000 000 0000</h5>
+                        <p class="rating">0 <i class="ri-shield-star-fill"></i></p>
+                    </div>
+
+                    <a href="tel:+27716249157"><i class="ri-phone-fill"></i></a>
+                </div>
+
+                <ul class="more-info">
+                    <li>
+                        <div class="icon">
+                            <i class="ri-map-pin-user-fill"></i>
+                        </div>
+                        <div class="box">
+                            <h5>Pick up at:</h5>
+                            <p>30 Pintail Cresent, Zeekoevlei</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <i class="ri-map-pin-time-line"></i>
+                        </div>
+                        <div class="box">
+                            <h5>ETA:</h5>
+                            <p>3 min</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Chat -->
+        <section id="chat" style="display: none;">
+            <div class="header active">
+                <!-- Driver Info -->
+                <div class="img">
+                    <img src="Images/gallery.png" alt="Driver Profile Picture">
+                </div>
+                <div class="info">
+                    <div class="name">Name and Surname</div>
+                    <div class="status">Online</div>
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="page active" id="chatBox">
+                    <!--Chat History-->
+                    <div class="box you">
+                        <p>You</p>
+                        <div class="time">Tue</div>
+                    </div>
+                    <div class="box me">
+                        <p>Me</p>
+                        <div class="time">00:00</div>
+                    </div>
+                </div>
+
+                <ul class="page" id="seeMoreInfo" style="display: none;">
+
+                </ul>
+
+            </div>
+
+            <div class="footer">
+                <!--Message Box-->
+                <div class="input-box">
+                    <textarea type="text" id="chatMessage" name="chatMessage" required="required"></textarea>
+                    <i class='bx bx-conversation' ></i>
+                    <span>Send Message . . .</span>
+                </div>
+                <button>
+                    <i class="ri-send-plane-fill"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Menu -->
+        <section id="menu" style="display: none;">
+            <div class="body">
+                <div class="page active" id="profileMenu">
+                    <div class="top">
+                        <div class="img">
+                            <img src="#" alt="Prifile Picture">
+                        </div>
+
+                        <h1 class="name"></h1>
+                        <h5 class="gender"></h5>
+                    </div>
+
+                    <ul class="middle">
+                        <li id="profileBtn">
+                            <div class="icon"><i class="ri-user-4-fill"></i></div>
+                            <div class="text">My Profile</div>
+                        </li>
+                        <li id="historyBtn">
+                            <div class="icon"><i class="ri-file-history-fill"></i></div>
+                            <div class="text">Request History</div>
+                        </li>
+                    </ul>
+
+                    <div class="bottom">
+                        <div id="logOut">
+                            <div class="icon"><i class="ri-door-open-fill"></i></div>
+                            <div class="text">Log Out</div>     
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page" style="display: none;" id="profile">
+                    <h1>My Profile</h1>
+                    <ul>
+                        <li>
+                            <div class="label">Employee ID:</div>
+                            <div class="content" id="employeeId"></div>
+                        </li>
+                        <li>
+                            <div class="label">Name:</div>
+                            <div class="content">
+                                <span class="editable" id="name"></span>
+                                <input class="input" id="firstNameInput" style="display: none;"></input>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="label">Surname:</div>
+                            <div class="content">
+                                <span class="editable" id="surname"></span>
+                                <input class="input" id="lastNameInput" style="display: none;"></input>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="label">Role:</div>
+                            <div class="content"></div>
+                        </li>
+                        <li>
+                            <div class="label">Email:</div>
+                            <div class="content">
+                                <span class="editable" id="email"></span>
+                                <input class="input" id="emailInput" style="display: none;"></input> 
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="edit-controls" id="editControls">
+                        <button id="editBtn">Edit</button>
+                    </div>
+                    <div class="save-cancel-controls" id="saveCancelControls" style="display:none;">
+                        <button id="saveBtn">Save</button>
+                        <button id="cancelBtn">Cancel</button>
+                    </div>
+                </div>
+
+                <div class="page" style="display: none;" id="history">
+                    <h1>Request History</h1>
+                    <div id="itemsTable" class="items-table">
+                        <div class="table-header">
+                            <div class="header-item">Name</div>
+                            <div class="header-item">Reason</div>
+                            <div class="header-item">Days</div>
+                            <div class="header-item">Start Date</div>
+                            <div class="header-item">End Date</div>
+                            <div class="header-item">Status</div>
+                        </div>
+                        <div id="tableItems" class="table-items">
+                            <div class="item">
+                                <div class="item-detail">1234</div>
+                                <div class="item-detail">1234</div>
+                                <div class="item-detail">1234</div>
+                                <div class="item-detail">1234</div>
+                                <div class="item-detail">1234</div>
+                                <div class="item-detail">1234</div>
+                            </div>
+                            <div class="item">
+                                <div class="item-detail">5678</div>
+                                <div class="item-detail">5678</div>
+                                <div class="item-detail">5678</div>
+                                <div class="item-detail">5678</div>
+                                <div class="item-detail">5678</div>
+                                <div class="item-detail">5678</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page" style="display: none;"></div>
+
+                <div class="page" style="display: none;"></div>
+            </div>
+        </section>
+
+        <div id="form" style="display: none;">
+            <div class="body">
+                <input type="checkbox" id="chk" aria-hidden="true">
+        
+                <div class="top" id="signUpPage">
+                    <form>
+                        <label for="chk" aria-hidden="true">Sign Up!</label>
+        
+                        <div class="input-box">
+                            <input type="text" id="signName" autocomplete="given-name" required>
+                            <i class='bx bx-user'></i>
+                            <span>Name & Surname...</span>
+                        </div>
+        
+                        <div class="input-box">
+                            <input type="email" id="signEmail" autocomplete="email" required>
+                            <i class='bx bx-envelope'></i>
+                            <span>Email address...</span>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="text" id="signTel" autocomplete="tel" required>
+                            <i class="ri-phone-fill"></i>
+                            <span>Phone Number...</span>
+                        </div>
+        
+                        <div class="input-box">
+                            <select type="text" id="signDepartment" required>
+                                <option value="" selected></option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Finance">Finance</option>
+                                <option value="HR">Human Resources</option>
+                                <option value="IT">IT</option>
+                                <option value="Sales">Sales</option>
+                            </select>
+                            <i class='bx bx-building'></i>
+                            <span>Department...</span>
+                        </div>
+        
+                        <div class="input-box">
+                            <input type="password" id="signPassword" required>
+                            <i class='bx bxs-lock'></i>
+                            <span>Password...</span>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="password" id="signConfPassword" required>
+                            <i class='bx bxs-lock'></i>
+                            <span>Confrim Password...</span>
+                        </div>
+
+        
+                        <button id="createAccount" type="submit">Sign Up</button>
+                    </form>
+                </div>
+        
+                <div class="bottom" id="logInPage">
+                    <form>
+                        <label for="chk" aria-hidden="true">Log In!</label>
+                        
+                        <div class="input-box">
+                            <input type="email" id="loginEmail" required>
+                            <i class='bx bx-envelope'></i>
+                            <span>Email Address...</span>
+                        </div>
+        
+                        <div class="input-box">
+                            <input type="password" id="loginPassword" required>
+                            <i class='bx bxs-lock'></i>
+                            <span>Password...</span>
+                        </div>
+
+                        <button id="login" type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--   Side   -->
+    <footer>
+        <div class="side-nav">
+            <div class="logo">
+                <img src="Images/car (1).png" alt="myTransit Pro Logo">
+            </div>
+
+            <ul>
+                <li class="active">
+                    <div class="icon"><i class="ri-home-2-line"></i></div>
+                    <div class="text">Home</div>
+                </li>
+                <li>
+                    <div class="icon"><i class='bx bx-bookmark-alt-plus' ></i></div>
+                    <div class="text">Book</div>
+                </li>
+                <li>
+                    <div class="icon"><i class="ri-route-line"></i></div>
+                    <div class="text">Transit</div>
+                </li>
+                <li>
+                    <div class="icon"><i class='bx bx-conversation' ></i> <span id="newMsg"></span></div>
+                    <div class="text">Chat</div>
+                </li>
+            </ul>
+
+            <div id="menuItem">
+                <i class="ri-menu-4-fill" ></i>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script type="module" src="Js/home.js?v=5"></script>
+    <script async 
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCllsRBlMRhgc-FWqVDhEj3SsujT-Restw&libraries=places&loading=async">
+    </script>
+</body>
+</html>

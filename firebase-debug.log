@@ -1,0 +1,103 @@
+[debug] [2024-09-29T11:27:04.342Z] ----------------------------------------------------------------------
+[debug] [2024-09-29T11:27:04.345Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Liam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-09-29T11:27:04.346Z] CLI Version:   13.20.1
+[debug] [2024-09-29T11:27:04.346Z] Platform:      win32
+[debug] [2024-09-29T11:27:04.346Z] Node Version:  v20.5.0
+[debug] [2024-09-29T11:27:04.346Z] Time:          Sun Sep 29 2024 13:27:04 GMT+0200 (South Africa Standard Time)
+[debug] [2024-09-29T11:27:04.346Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-29T11:27:04.420Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-29T11:27:04.420Z] > authorizing via signed-in user (theegreycompany@gmail.com)
+[debug] [2024-09-29T11:27:04.420Z] [iam] checking project mytransitpro for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2024-09-29T11:27:04.422Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:04.422Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:04.423Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mytransitpro:testIamPermissions [none]
+[debug] [2024-09-29T11:27:04.423Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mytransitpro:testIamPermissions x-goog-quota-user=projects/mytransitpro
+[debug] [2024-09-29T11:27:04.423Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mytransitpro:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-09-29T11:27:06.156Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mytransitpro:testIamPermissions 200
+[debug] [2024-09-29T11:27:06.156Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mytransitpro:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2024-09-29T11:27:06.157Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:06.157Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:06.157Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/mytransitpro/serviceAccounts/mytransitpro@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-09-29T11:27:06.157Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/mytransitpro/serviceAccounts/mytransitpro@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-09-29T11:27:07.858Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/mytransitpro/serviceAccounts/mytransitpro@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-09-29T11:27:07.858Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/mytransitpro/serviceAccounts/mytransitpro@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-09-29T11:27:07.859Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:07.859Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:07.859Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mytransitpro [none]
+[debug] [2024-09-29T11:27:08.431Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mytransitpro 200
+[debug] [2024-09-29T11:27:08.431Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mytransitpro {"projectId":"mytransitpro","projectNumber":"250746298184","displayName":"myTransit Pro","name":"projects/mytransitpro","resources":{"hostingSite":"mytransitpro","storageBucket":"mytransitpro.appspot.com","locationId":"europe-west2"},"state":"ACTIVE","etag":"1_331416ca-ed3b-49e7-a0a4-d412e421efc7"}
+[info] 
+[info] === Deploying to 'mytransitpro'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2024-09-29T11:27:08.437Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:08.437Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:08.437Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/firebasestorage.googleapis.com [none]
+[debug] [2024-09-29T11:27:08.437Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/firebasestorage.googleapis.com x-goog-quota-user=projects/mytransitpro
+[debug] [2024-09-29T11:27:09.134Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/firebasestorage.googleapis.com 200
+[debug] [2024-09-29T11:27:09.134Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/firebasestorage.googleapis.com [omitted]
+[info] +  storage: required API firebasestorage.googleapis.com is enabled 
+[debug] [2024-09-29T11:27:09.135Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:09.135Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:09.135Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/mytransitpro/defaultBucket [none]
+[debug] [2024-09-29T11:27:09.898Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/mytransitpro/defaultBucket 200
+[debug] [2024-09-29T11:27:09.898Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/mytransitpro/defaultBucket {"name":"projects/mytransitpro/defaultBucket","location":"EUROPE-WEST2","bucket":{"name":"projects/mytransitpro/buckets/mytransitpro.appspot.com"}}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2024-09-29T11:27:09.900Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:09.901Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:09.901Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test [none]
+[debug] [2024-09-29T11:27:09.901Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test [omitted]
+[debug] [2024-09-29T11:27:10.909Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test 200
+[debug] [2024-09-29T11:27:10.909Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2024-09-29T11:27:10.913Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:10.913Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:10.913Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test [none]
+[debug] [2024-09-29T11:27:10.913Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test [omitted]
+[debug] [2024-09-29T11:27:11.712Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test 200
+[debug] [2024-09-29T11:27:11.712Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/mytransitpro:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2024-09-29T11:27:11.714Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:11.714Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:11.714Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mytransitpro [none]
+[debug] [2024-09-29T11:27:12.046Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mytransitpro 200
+[debug] [2024-09-29T11:27:12.046Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mytransitpro {"projectId":"mytransitpro","projectNumber":"250746298184","displayName":"myTransit Pro","name":"projects/mytransitpro","resources":{"hostingSite":"mytransitpro","storageBucket":"mytransitpro.appspot.com","locationId":"europe-west2"},"state":"ACTIVE","etag":"1_331416ca-ed3b-49e7-a0a4-d412e421efc7"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: preparing codebase transit for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-09-29T11:27:12.049Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:12.049Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:12.049Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:12.049Z] Checked if tokens are valid: true, expires at: 1727612226128
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-09-29T11:27:12.050Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:12.050Z] Checked if tokens are valid: true, expires at: 1727612226128
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-09-29T11:27:12.051Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:12.051Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:12.052Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-09-29T11:27:12.052Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/mytransitpro
+[debug] [2024-09-29T11:27:12.052Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-09-29T11:27:12.052Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/mytransitpro
+[debug] [2024-09-29T11:27:12.055Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudbuild.googleapis.com [none]
+[debug] [2024-09-29T11:27:12.055Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudbuild.googleapis.com x-goog-quota-user=projects/mytransitpro
+[debug] [2024-09-29T11:27:12.060Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/artifactregistry.googleapis.com [none]
+[debug] [2024-09-29T11:27:12.060Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/artifactregistry.googleapis.com x-goog-quota-user=projects/mytransitpro
+[debug] [2024-09-29T11:27:12.617Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudfunctions.googleapis.com 200
+[debug] [2024-09-29T11:27:12.618Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-09-29T11:27:13.894Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudbuild.googleapis.com 200
+[debug] [2024-09-29T11:27:13.894Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-09-29T11:27:13.906Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/runtimeconfig.googleapis.com 200
+[debug] [2024-09-29T11:27:13.906Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-09-29T11:27:13.912Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/artifactregistry.googleapis.com 200
+[debug] [2024-09-29T11:27:13.912Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mytransitpro/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-09-29T11:27:13.913Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:13.913Z] Checked if tokens are valid: true, expires at: 1727612226128
+[debug] [2024-09-29T11:27:13.913Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mytransitpro/adminSdkConfig [none]
